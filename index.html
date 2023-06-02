@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid" class="nav_top">
+            <a class="navbar-brand ms-5" id="weatherapp">Weather App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+              <form class="d-flex" role="search">
+                <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+              </form>
+            </div>
+          </div>
+    </nav>
+      
+    <div class="container">
+          <h1 class="my-4 text-center">Weather of <span id="cityname"></span></h1>
+          <main>
+              <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                      <h4 class="my-0 fw-normal">Temperature Information</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title"><span id="temp_big"></span><small class="text-body-secondary fw-light"> °C</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Temperature is <b><span id="temp"></span>°C</b></li>
+                        <li>Min Temperature is <b><span id="min_temp"></span>°C</b></li>
+                        <li>Max Temperature is <b><span id="max_temp"></span>°C</b></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                      <h4 class="my-0 fw-normal">Humidity Information</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title"><span id="humidity_big"></span><small class="text-body-secondary fw-light"> %</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Humidity is <b><span id="humidity"></span> %</b></li>
+                        <li>Feels Like <b><span id="feels_like"></span> °C</b></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                      <h4 class="my-0 fw-normal">Wind Info</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title"><span id="wind_speed_big"></span><small class="text-body-secondary fw-light"> m/s</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Wind Speed is <b><span id="wind_speed"></span> m/s</b></li>
+                        <li>Sunrise Time is <b><span id="sunrise"></span> IST</b></li>
+                        <li>Sunset Time is <b><span id="sunset"></span> IST</b></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </main>
+    </div>
+
+    <div class="container" id="foot">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© Made by Mitesh Agarwal</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cursor">
+      
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

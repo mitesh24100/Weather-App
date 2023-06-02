@@ -1,0 +1,89 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background: url('demo.png') no-repeat;
+    background-size:cover;
+}
+
+
+#foot {
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 600px) {
+    #weatherapp {
+        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+    #navbarSupportedContent {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }   
+
+}
+
+@media only screen and (min-width: 601px) {
+    #weatherapp {
+        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+    #navbarSupportedContent {
+        margin-top: 20px;
+    }   
+}
+
+@media only screen and (min-width: 900px) {
+
+    #weatherapp {
+        justify-content: center;
+        padding-left: auto;
+        padding-right: auto;
+    }
+    #navbarSupportedContent {
+        justify-content: right;
+        margin-top: 2px;
+        margin-bottom: 2px;;
+    }
+}
+
+.cursor {
+    z-index: 999;
+    background: #3685bd;
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696E8,
+                0 0 60px #2696E8,
+                0 0 100px #2696E8;
+    animation: colors 5s infinite;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes colors {
+
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }   
+}
+
+.cursor:before {
+
+    content: '';
+    position: absolute;
+    background: #2696E8;
+    width: 30px;
+    height: 30px;
+    opacity: 0.1;
+    transform: translate(-30%,-30%);
+    border-radius: 50%;
+}
+
